@@ -6,8 +6,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: black;
-	text-shadow: 0 1px white;
+	color: #f4f4f4;
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	direction: ltr;
 	text-align: left;
@@ -54,7 +53,9 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #f5f2f0;
+	background: rgba(0, 0, 0, 0.34);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.35);
+	border-radius: 5px;
 }
 
 /* Inline code */
@@ -171,23 +172,6 @@ pre[data-line] {
 		top: auto;
 		bottom: .4em;
 	}
-.token.tab:not(:empty):before,
-.token.cr:before,
-.token.lf:before {
-	color: hsl(24, 20%, 85%);
-}
-
-.token.tab:not(:empty):before {
-	content: '▸';
-}
-
-.token.cr:before {
-	content: '␍';
-}
-
-.token.lf:before {
-	content: '␊';
-}
 .token a {
 	color: inherit;
 }

@@ -20,6 +20,7 @@
 <![endif]-->
 
 	
+<div class="bar"></div>
 
 	<div id="wrapper">
 		<h2>Кнопки</h2>
@@ -27,15 +28,24 @@
 
 		<h2>Формы</h2>
 
-		<h3>checkbox</h3>
-		<pre><code class="language-markup">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="">
-			    Option one is this and that&mdash;be sure to include why it's great
-			  </label>
-			</div>
-		</code></pre>
+		<h3>checkbox</h3> <!-- ----------------- checkbox ----------------- -->
+			
+<pre><code class="language-markup">&lt;div class=&quot;checkbox&quot;&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+		<h3>radio</h3> <!-- ----------------- checkbox ----------------- -->
+			
+<pre><code class="language-markup">&lt;div class=&quot;radio&quot;&gt;
+  &lt;label&gt;
+    &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
+    Option one is this and that&mdash;be sure to include why it's great
+  &lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
 	</div>
 
 
@@ -47,11 +57,20 @@
 
 	<style>
 		body {
-			background-color: #ffffff;
+			background:url('example/bg.jpg') fixed;
+			color: #f4f4f4;
 		}
 		#wrapper {
 			width: 1080px;
 			margin: 50px auto 50px auto;
+		}
+		.bar {
+			background: #222222;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 50px;
+			height: 100%;
 		}
 	</style>
 	<script src="example/prism.js"></script>
