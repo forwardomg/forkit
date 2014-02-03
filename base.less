@@ -1,0 +1,32 @@
+// import less
+
+@import url('less/normalize.less');
+@import url('less/mixins.less');
+
+body {
+	color: #333333;
+	font: 13px Helvetica, arial, freesans, clean, sans-serif;
+	line-height: 1.4;
+}
+a {
+	color: #4183c4;
+	text-decoration: none;
+	font-weight: 700;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+h2 {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 10px;
+	font-size: 2em;
+}
+#main {
+	width: 1180px;
+	margin: 0 auto;
+	article {
+		padding: 10px;
+		margin: 10px 0;
+		font-size: 15px;
+	}
+}

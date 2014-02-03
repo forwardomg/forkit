@@ -7,72 +7,63 @@
 	<meta name="description" content="">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link rel="stylesheet" href="style.css">
-	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="example.css">
+	<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
 	<script src="js/html5shiv.js"></script> <!-- https://code.google.com/p/html5shiv/ -->
-
-	<!-- example -->
-
-	<link rel="stylesheet" href="example/prism.css">
 </head>
 <body>
 <!--[if lt IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-	
-<div class="bar"></div>
+	<div class="main">
+		<h2>Загаловки</h2>
 
-	<div id="wrapper">
-		<h2>Кнопки</h2>
-		<pre><code class="language-css">p { color: red }</code></pre>
+		<h1>h1. Bootstrap heading - 36px</h1>
+		<h2>h2. Bootstrap heading - 30px</h2>
+		<h3>h3. Bootstrap heading - 24px</h3>
+		<h4>h4. Bootstrap heading - 18px</h4>
+		<h5>h5. Bootstrap heading - 14px</h5>
+		<h6>h6. Bootstrap heading - 12px</h6>
 
-		<h2>Формы</h2>
+		<h2>Списки</h2>
+		<ul>
+			<li>Список #1</li>
+			<li>Список #2</li>
+			<li>Список #3</li>
+			<li>Список #4</li>
+			<li>Список #5</li>
+		</ul>
 
-		<h3>checkbox</h3> <!-- ----------------- checkbox ----------------- -->
-			
-<pre><code class="language-markup">&lt;div class=&quot;checkbox&quot;&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;checkbox&quot; value=&quot;&quot;&gt;
-    Option one is this and that&mdash;be sure to include why it's great
-  &lt;/label&gt;
-&lt;/div&gt;</code></pre>
+		<h2>text-align</h2>
 
-		<h3>radio</h3> <!-- ----------------- checkbox ----------------- -->
-			
-<pre><code class="language-markup">&lt;div class=&quot;radio&quot;&gt;
-  &lt;label&gt;
-    &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked&gt;
-    Option one is this and that&mdash;be sure to include why it's great
-  &lt;/label&gt;
-&lt;/div&gt;</code></pre>
+		.text-left {
+		  text-align: left;
+		}
+		.text-right {
+		  text-align: right;
+		}
+		.text-center {
+		  text-align: center;
+		}
+		.text-justify {
+		  text-align: justify;
+		}
+
+		<h2>Italic</h2>
+
+		<p>&lt;em&gt;Test&lt;/em&gt;</p>
+
+		<h2>Bold</h2>
+
+		&lt;strong&gt;Test&lt;/strong&gt;
+
+		<h2>Small</h2>
+
+		&lt;small&gt;Test&lt;/small&gt;
+
 
 	</div>
-
-
-
-
 	
-
-
-
-	<style>
-		body {
-			background:url('example/bg.jpg') fixed;
-			color: #f4f4f4;
-		}
-		#wrapper {
-			width: 1080px;
-			margin: 50px auto 50px auto;
-		}
-		.bar {
-			background: #222222;
-			position: fixed;
-			left: 0;
-			top: 0;
-			width: 50px;
-			height: 100%;
-		}
-	</style>
-	<script src="example/prism.js"></script>
 </body>
 </html>
