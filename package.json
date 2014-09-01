@@ -4,6 +4,7 @@
   "devDependencies": {
     "grunt": "latest",
     "grunt-contrib-less": "latest",
+    "grunt-bower-concat": "latest",
     "grunt-contrib-watch": "latest"
   }
 }

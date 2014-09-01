@@ -13,13 +13,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    imagemin: {  
-      dynamic: {                         // Another target
-        files: [{
-          expand: true,                  // Enable dynamic expansion
-          src: ['img/*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'img/'                  // Destination path prefix
-        }]
+    bower_concat: {
+      all: {
+        dest: 'js/main.js',
+        exclude: [
+            'fontawesome',
+            'animate.css'
+        ],
+        bowerOptions: {
+          relative: false
+        }
       }
     },
     watch: {

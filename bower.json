@@ -1,0 +1,24 @@
+{
+  "name": "Forkit",
+  "version": "0.1.0",
+  "homepage": "https://github.com/forwardomg/Forkit",
+  "authors": [
+    "forwardomg <forwardomg@gmail.com>"
+  ],
+  "description": "Kit for work",
+  "keywords": [
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "html5shiv": "~3.7.2"
+  }
+}
