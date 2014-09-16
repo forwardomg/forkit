@@ -15,10 +15,12 @@ module.exports = function(grunt) {
     },
     bower_concat: {
       all: {
-        dest: 'js/main.js',
+        dest: 'js/_bower.js',
         exclude: [
             'fontawesome',
-            'animate.css'
+            'animate.css',
+            'html5shiv',
+            'respond'
         ],
         bowerOptions: {
           relative: false
@@ -39,9 +41,11 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['less']);
+  grunt.registerTask('default', ['bower_concat']);
   grunt.registerTask('default', ['watch']);
   
 };
