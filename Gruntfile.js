@@ -27,6 +27,16 @@ module.exports = function(grunt) {
         }
       }
     },
+    imagemin: {
+      dynamic: {                         // Another target
+        files: [{
+          expand: true,                  // Enable dynamic expansion
+          cwd: 'images/',                   // Src matches are relative to this path
+          src: ['*.{png,jpg,gif}'],   // Actual patterns to match
+          dest: 'images/compressed/'                  // Destination path prefix
+        }]
+      }
+    },
     watch: {
       styles: {
         // Which files to watch (all .less files recursively in the less directory)
@@ -42,10 +52,12 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-concat');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['less']);
   grunt.registerTask('default', ['bower_concat']);
+  grunt.registerTask('default', ['imagemin']);
   grunt.registerTask('default', ['watch']);
   
 };
