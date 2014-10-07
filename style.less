@@ -1,69 +1,29 @@
-// import less
+// path variables
 
-@import url('bower_components/lesshat/build/lesshat.less');
+@bower-path: "bower_components";
+@image-path: "image";
+@less-path: "less";
+
+// style variables
+
+@body-bg:                 #fff;
+@text-color:              #333;
+@link-color:              #428bca;
+@link-hover-color:        darken(@link-color, 15%);
+
+@font-family-base:        Arial, sans-serif;
+@font-size-base:          14px;
+@line-height-base:        1.428571429; // 20/14
+
+// mixins less
+
+@import url("@{bower-path}/lesshat/build/lesshat.less");
 
 // import css
 
-@import (less) "bower_components/normalize.css/normalize.css";
+@import (less) "@{bower-path}/normalize.css/normalize.css";
 
+// import less
 
-body {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #333333;
-  background-color: #ffffff;
-}
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-a {
-  color: #428bca;
-  text-decoration: none;
-}
-a:hover,
-a:focus {
-  color: #2a6496;
-  text-decoration: underline;
-}
-h1 {
-	font-size: 36px;
-}
-h2 {
-	font-size: 30px;
-}
-h3 {
-	font-size: 24px;
-}
-h4 {
-	font-size: 18px;
-}
-h5 {
-	font-size: 14px;
-}
-h6 {
-	font-size: 12px;
-}
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.text-justify {
-  text-align: justify;
-}
-small {
-  font-size: 85%;
-}
+@import url("@{less-path}/utilities.less");
+@import url("@{less-path}/grid.less");
