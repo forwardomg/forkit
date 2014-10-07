@@ -20,7 +20,9 @@ module.exports = function(grunt) {
             'fontawesome',
             'animate.css',
             'html5shiv',
-            'respond'
+            'respond',
+            'normalize.css',
+            'lesshat'
         ],
         bowerOptions: {
           relative: false
