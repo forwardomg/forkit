@@ -1,29 +1,20 @@
-// path variables
-
+// path
 @bower-path: "bower_components";
-@image-path: "image";
+@image-path: "images";
 @less-path: "less";
 
-// style variables
-
-@body-bg:                 #fff;
-@text-color:              #333;
-@link-color:              #428bca;
-@link-hover-color:        darken(@link-color, 15%);
-
-@font-family-base:        Arial, sans-serif;
-@font-size-base:          14px;
-@line-height-base:        1.428571429; // 20/14
-
-// mixins less
-
-@import url("@{bower-path}/lesshat/build/lesshat.less");
 
 // import css
 
-@import (less) "@{bower-path}/normalize.css/normalize.css";
+
 
 // import less
 
+
+@import (less) "@{bower-path}/normalize.css/normalize.css";
+@import url("@{bower-path}/lesshat/build/lesshat.less");
+
 @import url("@{less-path}/utilities.less");
 @import url("@{less-path}/grid.less");
+@import url("@{less-path}/variables.less");
+@import url("@{less-path}/media.less");
