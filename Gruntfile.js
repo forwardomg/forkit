@@ -41,21 +41,12 @@ module.exports = function(grunt) {
     },
     watch: {
       less_reload: {
-        files: 'less/*.{less,html,php}',
+        files: ['less/*.{less,html,php}', '*.{less,html,php}', 'js/*.js'],
         tasks: ['less'],
         options: {
           livereload: true,
           nospawn: true
         },
-      },
-      styles: {
-        // Which files to watch (all .less files recursively in the less directory)
-        files: ['*.{less,html,php}'],
-        tasks: ['less'],
-        options: {
-          livereload: true,
-          nospawn: true
-        }
       }
     }
   });
