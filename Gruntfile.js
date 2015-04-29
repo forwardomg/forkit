@@ -39,6 +39,23 @@ module.exports = function(grunt) {
         }]
       }
     },
+    open : {
+      dev : {
+        path: 'http://127.0.0.1:9001/',
+        app: 'Google Chrome'
+      },
+      file : {
+        path : '/etc/hosts'
+      }
+    },
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          keepalive: true
+        },
+      }
+    },
     watch: {
       less_reload: {
         files: ['less/*.{less,html,php}', '*.{less,html,php}', 'js/*.js'],
@@ -54,11 +71,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-bower-concat');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-open');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['less']);
   grunt.registerTask('default', ['bower_concat']);
   grunt.registerTask('default', ['imagemin']);
+  grunt.registerTask('default', ['connect']);
   grunt.registerTask('default', ['watch']);
+
+  grunt.registerTask('dev', ['connect', 'open:dev', 'watch']);
   
 };

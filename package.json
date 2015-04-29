@@ -6,6 +6,8 @@
     "grunt-contrib-less": "latest",
     "grunt-bower-concat": "latest",
     "grunt-contrib-imagemin": "latest",
-    "grunt-contrib-watch": "latest"
+    "grunt-contrib-watch": "latest",
+    "grunt-open": "~0.2.3",
+    "grunt-contrib-connect": "~0.10.1"
   }
 }
