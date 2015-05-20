@@ -1,18 +1,16 @@
 // path
 @bower-path: "bower_components";
-@image-path: "images";
+@images-path: "images";
 @less-path: "less";
-
-
-// import css
-
-
 
 // import less
 
-
 @import (less) "@{bower-path}/normalize.css/normalize.css";
 @import url("@{bower-path}/lesshat/build/lesshat.less");
+
+// plugins
+
+@import url("@{less-path}/forkit-select.less");
 
 // mixins
 

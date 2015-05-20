@@ -353,6 +353,32 @@ td,
 th {
   padding: 0;
 }
+.forkit-select {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+.forkit-select ul {
+  background: #333;
+  color: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.forkit-select li {
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.forkit-select li:hover {
+  background-color: #4d4d4d;
+}
+.forkit-select-active {
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.forkit-select-active:hover {
+  background-color: #f4f4f4;
+}
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -435,32 +461,6 @@ a:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
-}
-.forkit-select {
-  position: relative;
-  display: inline-block;
-  padding: 15px;
-}
-.forkit-select ul {
-  background: #333;
-  color: #fff;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.forkit-select li {
-  cursor: pointer;
-  padding: 5px 15px;
-}
-.forkit-select li:hover {
-  background-color: #4d4d4d;
-}
-.forkit-select-active {
-  cursor: pointer;
-  padding: 5px 15px;
-}
-.forkit-select-active:hover {
-  background-color: #f4f4f4;
 }
 .media {
   margin-top: 15px;
