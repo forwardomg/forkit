@@ -8,7 +8,6 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          // target.css file: source.less file
           "style.css": "style.less"
         }
       }
@@ -42,10 +41,11 @@ module.exports = function(grunt) {
     open : {
       dev : {
         path: 'http://127.0.0.1:9001/',
-        app: 'Google Chrome'
+        app: 'chrome.exe'
       },
-      file : {
-        path : '/etc/hosts'
+      web : {
+        path: 'https://github.com/forwardomg/Forkit',
+        app: 'chrome.exe'
       }
     },
     connect: {
