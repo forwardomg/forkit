@@ -19,7 +19,6 @@
     "jquery": "latest",
     "html5shiv": "latest",
     "respond": "latest",
-    "normalize.css": "latest",
-    "lesshat": "latest"
+    "normalize.css": "latest"
   }
 }

@@ -28,6 +28,12 @@ module.exports = function(grunt) {
         }
       }
     },
+    autoprefixer: {
+      single_file: {
+        src: 'style.css',
+        dest: 'style.css'
+      },
+    },
     imagemin: {
       dynamic: {                         // Another target
         files: [{
@@ -57,9 +63,9 @@ module.exports = function(grunt) {
       }
     },
     watch: {
-      less_reload: {
+      less: {
         files: ['less/*.{less,html,php}', '*.{less,html,php}', 'js/*.js'],
-        tasks: ['less'],
+        tasks: ['compile'],
         options: {
           livereload: true,
           nospawn: true
@@ -73,14 +79,18 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['less']);
   grunt.registerTask('default', ['bower_concat']);
   grunt.registerTask('default', ['imagemin']);
+  grunt.registerTask('default', ['autoprefixer']);
   grunt.registerTask('default', ['connect']);
   grunt.registerTask('default', ['watch']);
 
+
+  grunt.registerTask('compile', ['less', 'autoprefixer']);
   grunt.registerTask('dev', ['connect', 'open:dev', 'watch']);
   
 };
