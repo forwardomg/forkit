@@ -1,4 +1,7 @@
 module.exports = function(grunt) {
+
+  require('time-grunt')(grunt);
+ 
   grunt.initConfig({
     less: {
       development: {
@@ -20,8 +23,7 @@ module.exports = function(grunt) {
             'animate.css',
             'html5shiv',
             'respond',
-            'normalize.css',
-            'lesshat'
+            'normalize.css'
         ],
         bowerOptions: {
           relative: false
@@ -35,12 +37,12 @@ module.exports = function(grunt) {
       },
     },
     imagemin: {
-      dynamic: {                         // Another target
+      dynamic: {
         files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'images/',                   // Src matches are relative to this path
-          src: ['*.{png,jpg,gif}'],   // Actual patterns to match
-          dest: 'images/compressed/'                  // Destination path prefix
+          expand: true,
+          cwd: 'images/',
+          src: ['*.{png,jpg,gif}'],
+          dest: 'images/compressed/'
         }]
       }
     },
@@ -74,23 +76,9 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-  grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-
-  grunt.registerTask('default', ['less']);
-  grunt.registerTask('default', ['bower_concat']);
-  grunt.registerTask('default', ['imagemin']);
-  grunt.registerTask('default', ['autoprefixer']);
-  grunt.registerTask('default', ['connect']);
-  grunt.registerTask('default', ['watch']);
-
+  require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('compile', ['less', 'autoprefixer']);
-  grunt.registerTask('dev', ['connect', 'open:dev', 'watch']);
+  grunt.registerTask('dev', ['open:dev', 'watch']);
   
 };
