@@ -1,0 +1,14 @@
+@icon-prefix: .icon;
+
+.icon-variant(@filename) {
+  	@url: '@{images-path}/icons/@{filename}.png';
+	background: url(@url) 0 0 no-repeat;
+	display: inline-block;
+	vertical-align: middle;
+	width: image-width(@url);
+	height: image-height(@url);
+}
+
+@{icon-prefix}-icon-links-box-1 {
+  .icon-variant(icon-links-box-1);
+}
