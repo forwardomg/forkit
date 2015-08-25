@@ -433,6 +433,78 @@ th {
 .text-uppercase {
   text-transform: uppercase;
 }
+.margin {
+  margin-bottom: 15px;
+}
+* + .margin {
+  margin-top: 15px;
+}
+.margin-top {
+  margin-top: 15px !important;
+}
+.margin-bottom {
+  margin-bottom: 15px !important;
+}
+.margin-left {
+  margin-left: 15px !important;
+}
+.margin-right {
+  margin-right: 15px !important;
+}
+/*
+ * Larger margins
+ */
+.margin-large {
+  margin-bottom: 50px;
+}
+* + .margin-large {
+  margin-top: 50px;
+}
+.margin-large-top {
+  margin-top: 50px !important;
+}
+.margin-large-bottom {
+  margin-bottom: 50px !important;
+}
+.margin-large-left {
+  margin-left: 50px !important;
+}
+.margin-large-right {
+  margin-right: 50px !important;
+}
+/*
+ * Smaller margins
+ */
+.margin-small {
+  margin-bottom: 5px;
+}
+* + .margin-small {
+  margin-top: 5px;
+}
+.margin-small-top {
+  margin-top: 5px !important;
+}
+.margin-small-bottom {
+  margin-bottom: 5px !important;
+}
+.margin-small-left {
+  margin-left: 5px !important;
+}
+.margin-small-right {
+  margin-right: 5px !important;
+}
+/*
+ * Remove margins
+ */
+.margin-remove {
+  margin: 0 !important;
+}
+.margin-top-remove {
+  margin-top: 0 !important;
+}
+.margin-bottom-remove {
+  margin-bottom: 0 !important;
+}
 * {
   box-sizing: border-box;
 }
@@ -442,8 +514,8 @@ th {
 }
 body {
   font-family: Arial, sans-serif;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 1.42857143;
   color: #333333;
   background-color: #ffffff;
 }
@@ -1432,6 +1504,9 @@ a:focus {
     display: none !important;
   }
 }
+.box-icon {
+  text-align: center;
+}
 .media {
   margin-top: 15px;
 }
@@ -1477,7 +1552,7 @@ a:focus {
   padding-left: 0;
   list-style: none;
 }
-.icon-icon-links-box-1 {
+.icon-links-box-1 {
   background: url('images/icons/icon-links-box-1.png') 0 0 no-repeat;
   display: inline-block;
   vertical-align: middle;
@@ -1497,8 +1572,8 @@ a:focus {
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 15px 30px;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 1.42857143;
   border-radius: none;
   -webkit-user-select: none;
      -moz-user-select: none;

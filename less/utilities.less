@@ -116,3 +116,46 @@
 .text-uppercase {
   text-transform: uppercase;
 }
+
+
+// Margin
+
+.margin { margin-bottom: @utility-margin; }
+* + .margin { margin-top: @utility-margin; }
+
+.margin-top { margin-top: @utility-margin !important; }
+.margin-bottom { margin-bottom: @utility-margin !important; }
+.margin-left { margin-left: @utility-margin !important; }
+.margin-right { margin-right: @utility-margin !important; }
+
+/*
+ * Larger margins
+ */
+
+.margin-large { margin-bottom: @utility-margin-large; }
+* + .margin-large { margin-top: @utility-margin-large; }
+
+.margin-large-top { margin-top: @utility-margin-large !important; }
+.margin-large-bottom { margin-bottom: @utility-margin-large !important; }
+.margin-large-left { margin-left: @utility-margin-large !important; }
+.margin-large-right { margin-right: @utility-margin-large !important; }
+
+/*
+ * Smaller margins
+ */
+
+.margin-small { margin-bottom: @utility-margin-small; }
+* + .margin-small { margin-top: @utility-margin-small; }
+
+.margin-small-top { margin-top: @utility-margin-small !important; }
+.margin-small-bottom { margin-bottom: @utility-margin-small !important; }
+.margin-small-left { margin-left: @utility-margin-small !important; }
+.margin-small-right { margin-right: @utility-margin-small !important; }
+
+/*
+ * Remove margins
+ */
+
+.margin-remove { margin: 0 !important; }
+.margin-top-remove { margin-top: 0 !important; }
+.margin-bottom-remove { margin-bottom: 0 !important; }
