@@ -3,20 +3,39 @@
 <head>
 	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Document</title>
+	<title></title>
 	<meta name="description" content="">
+	<!-- <meta name="keywords" content="">
+	<meta name="author" content=""> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 	<link rel="stylesheet" href="../style.css">
 	<link rel="stylesheet" href="guide.css">
-	<!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
-	<script src="../js/html5shiv.js"></script> <!-- https://code.google.com/p/html5shiv/ -->
+	<!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href=""> -->
+	<!-- <link rel="shortcut icon" href=""> -->
+
+	<!--
+	http://ogp.me/
+	<meta property="og:title" content="#" />
+	<meta property="og:url" content="#" />
+	<meta property="og:image" content="#" /> 
+	-->
+	
+	<!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/src/respond.js"></script>
+    <![endif]-->
+
 </head>
 <body>
-<!--[if lt IE 8]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
 
-	<style>
+	<!--[if lt IE 9]>
+	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<header class="header"></header>
+	<main class="main">
+
+		<style>
 		code {
 			background-color: #f4f4f4;
 			padding: 15px;
@@ -31,12 +50,12 @@
 		<section class="types">
 			<h2>Текст</h2>
 			
-			<h1>h1. Bootstrap heading - 36px</h1>
-			<h2>h2. Bootstrap heading - 30px</h2>
-			<h3>h3. Bootstrap heading - 24px</h3>
-			<h4>h4. Bootstrap heading - 18px</h4>
-			<h5>h5. Bootstrap heading - 14px</h5>
-			<h6>h6. Bootstrap heading - 12px</h6>
+			<h1>h1. Bootstrap heading</h1>
+			<h2>h2. Bootstrap heading</h2>
+			<h3>h3. Bootstrap heading</h3>
+			<h4>h4. Bootstrap heading</h4>
+			<h5>h5. Bootstrap heading</h5>
+			<h6>h6. Bootstrap heading</h6>
 
 			<div class="box">
 				<span class="text-uppercase">test</span>
@@ -195,12 +214,55 @@
 			</code>
 		</div>
 
+		<form action="" method="POST" role="form">
+			<legend>Form title</legend>
+		
+			<div class="form-group">
+				<label for="">label</label>
+				<input type="text" class="form-control" id="" placeholder="Input field">
+			</div>
+		
+			
+		
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
 
 
+		<h2>Списки</h2>
+
+		<ul>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+		</ul>
+
+		<hr>
+
+		<ul class="list-unstyled">
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+			<li>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</li>
+		</ul>
+
+		<hr>
+
+		<ul class="list-inline">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
 
 
+	</main>
+	<footer class="footer"></footer>
 
-	</div>
-	
+	<!-- Add script here -->
+	<script src="../js/_bower.js"></script>
+	<script src="../js/main.js"></script>
+
 </body>
 </html>

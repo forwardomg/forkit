@@ -2,23 +2,19 @@
 @bower-path: "bower_components";
 @images-path: "images";
 @less-path: "less";
+@icons-path: "images/icons";
 @mixins-path: "less/mixins";
 
 // import css
-
 @import (less) "@{bower-path}/normalize.css/normalize.css";
 
-// plugins
-
-@import url("@{less-path}/forkit-select.less");
-
 // import mixins
-
 @import url("@{mixins-path}/buttons.less");
+@import url("@{mixins-path}/image.less");
 
 // import less
-
 @import url("@{less-path}/utilities.less");
+@import url("@{less-path}/scaffolding.less");
 @import url("@{less-path}/grid.less");
 @import url("@{less-path}/variables.less");
 @import url("@{less-path}/media.less");
@@ -26,3 +22,9 @@
 @import url("@{less-path}/icons.less");
 @import url("@{less-path}/buttons.less");
 @import url("@{less-path}/fonts.less");
+@import url("@{less-path}/types.less");
+@import url("@{less-path}/forms.less");
+
+
+//pages
+@import url("@{less-path}/main.less");
