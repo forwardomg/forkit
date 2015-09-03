@@ -1548,13 +1548,6 @@ hr {
   padding-left: 0;
   list-style: none;
 }
-.icon-links-box-1 {
-  background: url('images/icons/icon-links-box-1.png') 0 0 no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  width: 56px;
-  height: 50px;
-}
 .btn {
   display: inline-block;
   margin-bottom: 0;

@@ -11,7 +11,8 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "style.css": "style.less"
+          "style.css": "style.less",
+          "guide/guide.css": "guide/guide.less"
         }
       }
     },
@@ -66,7 +67,7 @@ module.exports = function(grunt) {
     },
     watch: {
       less: {
-        files: ['less/*.{less,html,php}', '*.{less,html,php}', 'js/*.js,', 'etc/*.{html,less}'],
+        files: ['less/**/*.{less,html,php}', '*.{less,html,php}', 'js/*.js,', 'guide/*.{html,less}'],
         tasks: ['compile'],
         options: {
           livereload: true,
