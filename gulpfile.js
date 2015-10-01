@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
     less = require('gulp-less'),
     path = require('path'),
+    browserify = require('browserify'),
+    source = require('vinyl-source-stream'),
     autoprefixer = require('gulp-autoprefixer'),
     wiredep = require('wiredep').stream,
     browserSync = require('browser-sync').create(),
@@ -16,6 +18,14 @@ gulp.task('style', function () {
         cascade: false
     }))
     .pipe(gulp.dest('./'));
+});
+
+gulp.task('browserify', function() {
+  return browserify('./js/app.js')
+      .bundle()
+      // Передаем имя файла, который получим на выходе, vinyl-source-stream
+      .pipe(source('bundle.js'))
+      .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('bower', function () {

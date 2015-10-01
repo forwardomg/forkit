@@ -1,0 +1,1 @@
+var dwd2 = require('./js/test.js');
