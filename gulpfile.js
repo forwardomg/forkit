@@ -1,45 +1,12 @@
 var gulp = require('gulp'),
-    less = require('gulp-less'),
-    path = require('path'),
-    autoprefixer = require('gulp-autoprefixer'),
-    wiredep = require('wiredep').stream,
-    browserSync = require('browser-sync').create(),
-    reload = browserSync.reload;
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('style', function () {
-  return gulp.src('style.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
+  return gulp.src('./scss/style.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-        browsers: ['> 1%'],
-        cascade: false
+      browsers: ['last 2 versions']
     }))
-    .pipe(gulp.dest('./'));
-});
-
-gulp.task('bower', function () {
-  gulp.src('./index.html')
-    .pipe(wiredep({
-      optional: 'configuration',
-      goes: 'here'
-    }))
-    .pipe(gulp.dest('./'));
-});
-
-gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-});
-
-gulp.task('default', function() {
-  gulp.start('serve');
-  gulp.watch('bower.json', ['bower']);
-  gulp.watch('./**/*.{html,less}', function(event) {
-    gulp.start('style');
-    browserSync.reload();
-  });
+    .pipe(gulp.dest('./css'));
 });
