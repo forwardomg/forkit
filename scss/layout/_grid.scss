@@ -1,0 +1,127 @@
+.container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1260px;
+  &.is-fluid {
+    margin: 0 20px;
+    max-width: none;
+  }
+}
+.column {
+  flex: 1;
+  // default grid
+  @include tablet {
+    @for $i from 1 through 12 {
+      &.is-#{$i} {
+        flex: none;
+        width: $i / 12 * 100%;
+        @if $i == 12 {
+          margin-left: 0;
+        }
+      }
+      &.is-offset-#{$i} {
+        margin-left: $i / 12 * 100%;
+      }
+      &.is-#{$i}-tablet {
+        flex: none;
+        width: $i / 12 * 100%;
+        @if $i == 12 {
+          margin-left: 0;
+        }
+      }
+      &.is-offset-#{$i}-tablet {
+        margin-left: $i / 12 * 100%;
+      }
+    }
+  }
+  // widescreen grid
+  @include widescreen {
+    @for $i from 1 through 12 {
+      &.is-#{$i}-widescreen {
+        flex: none;
+        width: $i / 12 * 100%;
+        @if $i == 12 {
+          margin-left: 0;
+        }
+      }
+      &.is-offset-#{$i}-widescreen {
+        margin-left: $i / 12 * 100%;
+      }
+    }
+  }
+  // desktop grid
+  @include desktop {
+    @for $i from 1 through 12 {
+      &.is-#{$i}-desktop {
+        flex: none;
+        width: $i / 12 * 100%;
+        @if $i == 12 {
+          margin-left: 0;
+        }
+      }
+      &.is-offset-#{$i}-desktop {
+        margin-left: $i / 12 * 100%;
+      }
+    }
+  }
+  // mobile grid
+  @include mobile {
+    @for $i from 1 through 12 {
+      &.is-#{$i}-mobile {
+        flex: none;
+        width: $i / 12 * 100%;
+        @if $i == 12 {
+          margin-left: 0;
+        }
+      }
+      &.is-offset-#{$i}-mobile {
+        margin-left: $i / 12 * 100%;
+      }
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  &.is-centered {
+    justify-content: center;
+  }
+  &.is-gapless {
+    margin-left: 0;
+    margin-right: 0;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    & > .column {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  &.is-multiline {
+    flex-wrap: wrap;
+  }
+  &.is-vcentered {
+    align-items: center;
+  }
+  &.is-grid {
+    @include tablet {
+      flex-wrap: wrap;
+      & > .column {
+        flex-basis: 33.3333%;
+        max-width: 33.3333%;
+        padding: 10px;
+        width: 33.3333%;
+        & + .column {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+.content-md {
+  padding: 16px 20px;
+  .content-fluid {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}

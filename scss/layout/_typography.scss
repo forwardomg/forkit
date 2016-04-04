@@ -1,0 +1,96 @@
+h2, .h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.font-base {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+};
+.font-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+};
+
+/* Font Styles */
+.font-display4 {
+  @extend .font-base;
+  @extend .font-nowrap;
+
+  font-size: 112px;
+  font-weight: 300;
+  letter-spacing: -.044em;
+  line-height: 120px;
+};
+
+.font-display3 {
+  @extend .font-base;
+  @extend .font-nowrap;
+
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: -.026em;
+  line-height: 60px;
+};
+
+.font-display2 {
+  @extend .font-base;
+
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: -.018em;
+  line-height: 48px;
+};
+
+.font-display1 {
+  @extend .font-base;
+
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: -.01em;
+  line-height: 40px;
+};
+
+.font-headline {
+  @extend .font-base;
+
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -.012em;
+  line-height: 32px;
+};
+
+.font-title {
+  @extend .font-base;
+  @extend .font-nowrap;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+};
+
+.font-subhead {
+  @extend .font-base;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+};
+
+.font-body2 {
+  @extend .font-base;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+};
+
+.font-body1 {
+  @extend .font-base;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+};

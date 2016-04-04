@@ -1,0 +1,93 @@
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.color-green-500 {
+	color: $green-500;
+}
+.color-pink-300 {
+	color: $pink-300;
+}
+.float-right {
+	float: right;
+}
+.color-blue-700 {
+	color: $blue-700;
+}
+.color-yellow-600 {
+	color: $yellow-600;
+}
+.color-red-600 {
+	color: $red-600;
+}
+
+// Display
+.is-block {
+  display: block;
+}
+.is-inline {
+  display: inline;
+}
+.is-flex {
+  display: flex;
+}
+// Float
+.is-clearfix {
+  @include clearfix;
+}
+.is-pulled-left {
+  float: left;
+}
+.is-pulled-right {
+  float: right;
+}
+// Overlay
+.is-overlay {
+  @include overlay;
+}
+// Size
+.is-fullwidth {
+  width: 100%;
+}
+// Text
+.is-text-centered {
+  text-align: center;
+}
+.is-text-left {
+  text-align: left;
+}
+.is-text-right {
+  text-align: right;
+}
+// Visibility
+.is-hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+.is-hidden-tablet {
+  @include tablet {
+    display: none !important;
+  }
+}
+.is-hidden-touch {
+  @include touch {
+    display: none !important;
+  }
+}
+.is-hidden-desktop {
+  @include desktop {
+    display: none !important;
+  }
+}
+// Other
+.is-disabled {
+  pointer-events: none;
+}
+.is-marginless {
+  margin: 0 !important;
+}
+.is-unselectable {
+  @include unselectable;
+}
